@@ -6,14 +6,14 @@ import styles from "./index.module.css";
 import { useFormState, useFormStatus } from "react-dom";
 
 function InputDisplay({ value }: { value: string }) {
-  const state = useFormStatus();
+  const formStatus = useFormStatus();
 
   return (
     <div className={styles.calculator}>
       <input
         type="text"
         className={styles.display}
-        value={state.pending ? "..." : value}
+        value={formStatus.pending ? "..." : value}
         readOnly
       />
       <div className={styles.buttons}>
