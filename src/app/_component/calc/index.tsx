@@ -12,7 +12,6 @@ export function Calc() {
 
   const [state, dispatch] = useFormState(calcAction, initialState);
 
-  console.log(state);
   return (
     <form action={dispatch}>
       <div className={styles.calculator}>
